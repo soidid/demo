@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 
+html {
+  height: auto;
+}
 body {
   /* font-family: "Open Sans","Helvetica Neue", "Helvetica", "Arial", sans-serif; */
   font-family: "Source Han Sans TC", "Noto Sans", Helvetica, Arial, sans-serif;
@@ -1157,3 +1160,63 @@ input:checked + .slider::before {
     height: 220px;
   }
 }
+/* ------------------------------------------------------------ */
+/* add
+/* ------------------------------------------------------------ */
+.index_ad {
+  position: fixed;
+  bottom: 200px;
+  z-index: 20;
+  left: -400px;
+}
+.index_ad_show {
+  bottom: 200px;
+  left: 20px;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.index_ad_text {
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0px 1px 6px rgba(0,0,0,.32);
+  background: white;
+  border-radius: 5px;
+  width: 160px;
+  padding: 15px;
+  vertical-align: top;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+}
+#footer {
+    margin-top: 200px;
+}
+.index_ad_img {
+  width: 120px;
+  border-radius: 100%;
+  border: 10px solid white;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.32);
+  z-index: 20;
+}
+
+@media screen and (min-width: 900px){
+  .index_ad, .index_ad_show {
+    bottom: 120px;
+  }
+}
+@media screen and (min-width: 600px){
+  .index_ad_img {
+    bottom: 150px;
+  }
+  .index_ad_text {
+    margin-top: 20px;
+  }
+}
+
+
+
+

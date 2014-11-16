@@ -171,6 +171,23 @@ app.controller('IndexCtrl', ['$scope', 'DataService', '$location', '$sce', funct
   DataService.getData('candidate').then(function(data){
       $scope.candidates = data;
   });
+  
+ 
+  $(window).scroll(function() {
+    console.log($(window).scrollTop());
+    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+        //footer visible
+        console.log("bottom!");
+        if ($(window).scrollTop() + $(window).height() > $('#footer').offset().top) {
+            $(".index_ad").addClass("index_ad_show");
+        }
+    }else {
+        $(".index_ad").removeClass("index_ad_show");
+        
+    }
+
+  });
+
 
 }]);
 app.controller('CandidateCtrl', ['$scope', 'DataService', '$location', '$sce', '$routeParams', function ($scope, DataService, $location, $sce, $routeParams){
